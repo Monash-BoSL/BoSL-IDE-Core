@@ -14,7 +14,7 @@
           "architecture": "avr",
           "version": "1.0.0",
           "category": "Contributed",
-          "url": "file://C:/Users/scat0009/json/BoSLBoards-1.0.0.zip",
+          "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSLBoards-1.0.0.zip",
           "archiveFileName": "BoSLBoards-1.0.0.zip",
           "checksum": "SHA-256:e412c030798fccf2dfd1c46dec6eeff7ccd1daf3467e1a045401e8e863a77bf5",
           "size": "17740",
