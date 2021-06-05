@@ -1,0 +1,32 @@
+{
+  "packages": [
+    {
+      "name": "BoSL Boards dev",
+      "maintainer": "BoSL: Water Monitoring & Control",
+      "websiteURL": "http://www.bosl.com.au/wiki/",
+      "email": "stephen.catsamas@monash.edu",
+      "help": {
+        "online": "http://www.bosl.com.au/wiki/"
+      },
+      "platforms": [
+        {
+          "name": "BoSL Boards dev",
+          "architecture": "avr",
+          "version": "1.1.0",
+          "category": "Contributed",
+          "url": "file://C:/Users/scat0009/drop/BoSL-IDE-Core/BoSLBoards-1.1.0.zip",
+          "archiveFileName": "BoSLBoards-1.1.0.zip",
+          "checksum": "SHA-256:F1CD441677E6BC9B0A65351913744D599EDB4748CF8977481E9652F8905D5658",
+          "size": "412747",
+          "boards": [
+            {"name": "BoSL Board"},
+            {"name": "microBoSL" },
+			{"name": "ATmega328PB" }
+          ],
+          "toolsDependencies": []
+        }
+      ],
+      "tools": []
+    }
+  ]
+}
