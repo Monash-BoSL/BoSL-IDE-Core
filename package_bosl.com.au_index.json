@@ -23,6 +23,22 @@
             {"name": "microBoSL" }
           ],
           "toolsDependencies": []
+        },
+        {
+          "name": "BoSL Boards",
+          "architecture": "avr",
+          "version": "1.1.0",
+          "category": "Contributed",
+          "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSLBoards-1.1.0.zip",
+          "archiveFileName": "BoSLBoards-1.1.0.zip",
+          "checksum": "SHA-256:F1CD441677E6BC9B0A65351913744D599EDB4748CF8977481E9652F8905D5658",
+          "size": "412747",
+          "boards": [
+            {"name": "BoSL Board"},
+            {"name": "microBoSL" },
+            {"name": "ATmega328PB" }
+          ],
+          "toolsDependencies": []
         }
       ],
       "tools": []
