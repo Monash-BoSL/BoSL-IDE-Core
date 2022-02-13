@@ -268,8 +268,8 @@
           "category": "Contributed",
           "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSLBoardsSAMD-1.0.5.zip",
           "archiveFileName": "BoSLBoardsSAMD-1.0.5.zip",
-          "checksum": "SHA-256:A11791231D8717AAC2A0B549AC4B551ED5D48265550F2543DD75EB3CBEAF9E66",
-          "size": "12875424",
+          "checksum": "SHA-256:4EB7C92EFF5D33B26738F2FE28BCF1F3FF25696AC31B1545B4E380ED14B85BBB",
+          "size": "2003942",
           "boards": [
             {"name": "BoSL nano"}
           ],
