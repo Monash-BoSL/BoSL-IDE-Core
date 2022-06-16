@@ -186,6 +186,14 @@ extern Uart Serial1;
 #define PIN_SERIAL1_TX (12ul)
 #define PAD_SERIAL1_TX (UART_TX_PAD_2)
 #define PAD_SERIAL1_RX (SERCOM_RX_PAD_3)
+
+// Serial2
+extern Uart Serial2;
+#define PIN_SERIAL2_RX (18ul)
+#define PIN_SERIAL2_TX (19ul)
+#define PAD_SERIAL2_TX (UART_TX_PAD_2)
+#define PAD_SERIAL2_RX (SERCOM_RX_PAD_1)
+
 #endif // __cplusplus
 
 #ifdef __cplusplus
@@ -216,6 +224,8 @@ unsigned int PINCOUNT_fn();
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
-// Alias Serial to SerialUSB
+
+// Sercom Aliases
 #define Serial                      SerialUSB
+#define SerialnRF					Serial1
 
