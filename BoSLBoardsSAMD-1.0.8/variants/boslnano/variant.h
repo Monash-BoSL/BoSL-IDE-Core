@@ -102,21 +102,21 @@ static const uint8_t A6  = PIN_A6;
 
 // SPI Interfaces
 // --------------
-#define SPI_INTERFACES_COUNT 1
+#define SPI_INTERFACES_COUNT 2
  
 // // SPI
-// #define PIN_SPI_MISO  (10u)
-// #define PIN_SPI_MOSI  (8u)
-// #define PIN_SPI_SCK   (9u)
-// #define PIN_SPI_SS    (4u)
-// #define PERIPH_SPI    sercom1
-// #define PAD_SPI_TX    SPI_PAD_0_SCK_1
-// #define PAD_SPI_RX    SERCOM_RX_PAD_3
+#define PIN_SPI_MISO  (6u)
+#define PIN_SPI_MOSI  (0u)
+#define PIN_SPI_SCK   (1u)
+#define PIN_SPI_SS    (4u)
+#define PERIPH_SPI    sercom1
+#define PAD_SPI_TX    SPI_PAD_0_SCK_1
+#define PAD_SPI_RX    SERCOM_RX_PAD_3
 
-// static const uint8_t SS   = PIN_SPI_SS;   // SPI Slave SS not used. Set here only for reference.
-// static const uint8_t MOSI = PIN_SPI_MOSI;
-// static const uint8_t MISO = PIN_SPI_MISO;
-// static const uint8_t SCK  = PIN_SPI_SCK;
+static const uint8_t SS   = PIN_SPI_SS;   // SPI Slave SS not used. Set here only for reference.
+static const uint8_t MOSI = PIN_SPI_MOSI;
+static const uint8_t MISO = PIN_SPI_MISO;
+static const uint8_t SCK  = PIN_SPI_SCK;
 
 // SPI1: Connected to SD
 #define PIN_SPI1_MISO (26u)

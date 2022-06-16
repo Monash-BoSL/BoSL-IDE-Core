@@ -383,6 +383,47 @@
               "version": "1.2.0"
             }
           ]
+        },
+		{
+          "name": "BoSL SAMD Boards",
+          "architecture": "samd",
+          "version": "1.0.8",
+          "category": "Contributed",
+          "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSLBoardsSAMD-1.0.8.zip",
+          "archiveFileName": "BoSLBoardsSAMD-1.0.8.zip",
+          "checksum": "SHA-256:63CD306791CBCF5F155E9795D2B5FC10796EEE4303138DF7429315D4788DB525",
+          "size": "1714544",
+          "boards": [
+            {"name": "BoSL nano"}
+          ],
+           "toolsDependencies": 
+          [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "7-2017q4"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.7.0-arduino3"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino7"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.5.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.0"
+            }
+          ]
         }
       ],
       "tools": []
