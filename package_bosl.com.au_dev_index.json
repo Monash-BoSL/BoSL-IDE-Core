@@ -61,7 +61,7 @@
           "architecture": "samd",
           "version": "1.1.0",
           "category": "Contributed",
-          "url": "https://github.com/Monash-BoSL/BoSL-IDE-Core/blob/main/BoSLBoardsSAMD-1.1.0.zip",
+          "url": "https://github.com/Monash-BoSL/BoSL-IDE-Core/raw/main/BoSLBoardsSAMD-1.1.0.zip",
           "archiveFileName": "BoSLBoardsSAMD-1.1.0.zip",
           "checksum": "SHA-256:2EDA95A71B58D3ABCD2B4640814C23E742469931C47EA1E6C228B59B25C6184B",
           "size": "1714551",
