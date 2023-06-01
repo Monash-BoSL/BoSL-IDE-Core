@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "BoSL Boards",
+      "name": "BoSL Boards DEV",
       "maintainer": "BoSL: Water Monitoring & Control",
       "websiteURL": "http://www.bosl.com.au/wiki/",
       "email": "stephen.catsamas@monash.edu",
@@ -56,7 +56,7 @@
           ],
           "toolsDependencies": []
         },
-        		{
+		{
           "name": "BoSL SAMD Boards DEV",
           "architecture": "samd",
           "version": "1.1.0",
