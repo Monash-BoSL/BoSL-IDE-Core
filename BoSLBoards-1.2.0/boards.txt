@@ -1,0 +1,489 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+##############################################################
+
+# Menu options
+menu.clock=Clock
+menu.BOD=BOD
+menu.eeprom=EEPROM
+menu.bootloader=Bootloader
+menu.serial0buf=Serial Buffer (RX/TX)
+menu.twibuf=I2C Buffer (RX/TX)
+#menu.serial1buf=Serial1 Buffer (RX/TX)
+
+##############################################################
+## BoSL Board 0.5.x w/ ATmega328P @ 3.3V, 8 MHz
+bosl0v5.name=BoSL Board 0.5.x
+bosl0v5.upload.tool=avrdude
+bosl0v5.upload.maximum_data_size=8192
+bosl0v5.bootloader.tool=avrdude
+bosl0v5.bootloader.unlock_bits=0xff
+bosl0v5.bootloader.lock_bits=0xff
+bosl0v5.build.core=MCUdude_corefiles
+bosl0v5.build.board=AVR_ATmega640
+bosl0v5.build.mcu=atmega640
+bosl0v5.build.bootloader_led=led+b7
+bosl0v5.build.extra_flags={build.clkpr}
+
+# Upload port select
+bosl0v5.menu.bootloader.uart0=Yes (UART0)
+bosl0v5.menu.bootloader.uart0.upload.maximum_size=65024
+bosl0v5.menu.bootloader.uart0.upload.protocol=urclock
+bosl0v5.menu.bootloader.uart0.upload.uartpins=uart0_rxe0_txe1
+bosl0v5.menu.bootloader.uart0.build.export_merged_output=true
+bosl0v5.menu.bootloader.uart0.bootloader.file=urboot/{build.mcu}/watchdog_1_s/autobaud/{upload.uartpins}/{build.bootloader_led}/urboot_{build.mcu}_pr_ee_ce.hex
+
+bosl0v5.menu.bootloader.uart1=Yes (UART1)
+bosl0v5.menu.bootloader.uart1.upload.maximum_size=65024
+bosl0v5.menu.bootloader.uart1.upload.protocol=urclock
+bosl0v5.menu.bootloader.uart1.upload.uartpins=uart1_rxd2_txd3
+bosl0v5.menu.bootloader.uart1.build.export_merged_output=true
+bosl0v5.menu.bootloader.uart1.bootloader.file=urboot/{build.mcu}/watchdog_1_s/autobaud/{upload.uartpins}/{build.bootloader_led}/urboot_{build.mcu}_pr_ee_ce.hex
+
+bosl0v5.menu.bootloader.uart2=Yes (UART2)
+bosl0v5.menu.bootloader.uart2.upload.maximum_size=65024
+bosl0v5.menu.bootloader.uart2.upload.protocol=urclock
+bosl0v5.menu.bootloader.uart2.upload.uartpins=uart2_rxh0_txh1
+bosl0v5.menu.bootloader.uart2.build.export_merged_output=true
+bosl0v5.menu.bootloader.uart2.bootloader.file=urboot/{build.mcu}/watchdog_1_s/{build.oscillator}/{build.clock_speed}/{upload.speed}/{upload.uartpins}/{build.bootloader_led}/urboot_{build.mcu}_pr_ee_ce.hex
+
+bosl0v5.menu.bootloader.uart3=Yes (UART3)
+bosl0v5.menu.bootloader.uart3.upload.maximum_size=65024
+bosl0v5.menu.bootloader.uart3.upload.protocol=urclock
+bosl0v5.menu.bootloader.uart3.upload.uartpins=uart3_rxj0_txj1
+bosl0v5.menu.bootloader.uart3.build.export_merged_output=true
+bosl0v5.menu.bootloader.uart3.bootloader.file=urboot/{build.mcu}/watchdog_1_s/{build.oscillator}/{build.clock_speed}/{upload.speed}/{upload.uartpins}/{build.bootloader_led}/urboot_{build.mcu}_pr_ee_ce.hex
+
+bosl0v5.menu.bootloader.no_bootloader=No bootloader
+bosl0v5.menu.bootloader.no_bootloader.upload.maximum_size=65536
+bosl0v5.menu.bootloader.no_bootloader.build.export_merged_output=false
+bosl0v5.menu.bootloader.no_bootloader.bootloader.file=empty/empty.hex
+
+# EEPROM
+bosl0v5.menu.eeprom.keep=EEPROM retained
+bosl0v5.menu.eeprom.keep.bootloader.high_fuses=0xd7
+bosl0v5.menu.eeprom.erase=EEPROM not retained
+bosl0v5.menu.eeprom.erase.bootloader.high_fuses=0xdf
+
+# Pinouts
+bosl0v5.menu.pinout.mega_pinout=Arduino MEGA pinout
+bosl0v5.menu.pinout.mega_pinout.build.variant=100-pin-arduino-mega
+bosl0v5.menu.pinout.avr_pinout=AVR pinout
+bosl0v5.menu.pinout.avr_pinout.build.variant=100-pin-avr
+
+# Brown out detection
+bosl0v5.menu.BOD.2v7=BOD 2.7V
+bosl0v5.menu.BOD.2v7.bootloader.extended_fuses=0xfd
+bosl0v5.menu.BOD.4v3=BOD 4.3V
+bosl0v5.menu.BOD.4v3.bootloader.extended_fuses=0xfc
+bosl0v5.menu.BOD.1v8=BOD 1.8V
+bosl0v5.menu.BOD.1v8.bootloader.extended_fuses=0xfe
+bosl0v5.menu.BOD.disabled=BOD disabled
+bosl0v5.menu.BOD.disabled.bootloader.extended_fuses=0xff
+
+# Compiler link time optimization
+bosl0v5.menu.LTO.Os_flto=LTO enabled
+bosl0v5.menu.LTO.Os_flto.compiler.c.extra_flags=-Wextra -flto -g
+bosl0v5.menu.LTO.Os_flto.compiler.c.elf.extra_flags=-w -flto -g
+bosl0v5.menu.LTO.Os_flto.compiler.cpp.extra_flags=-Wextra -flto -g
+bosl0v5.menu.LTO.Os_flto.ltoarcmd=avr-gcc-ar
+
+bosl0v5.menu.LTO.Os=LTO disabled
+bosl0v5.menu.LTO.Os.compiler.c.extra_flags=
+bosl0v5.menu.LTO.Os.compiler.c.elf.extra_flags=
+bosl0v5.menu.LTO.Os.compiler.cpp.extra_flags=
+bosl0v5.menu.LTO.Os.ltoarcmd=avr-ar
+
+# Clock frequencies
+bosl0v5.menu.clock.16MHz_external=External 16 MHz
+bosl0v5.menu.clock.16MHz_external.upload.speed=115200
+bosl0v5.menu.clock.16MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.16MHz_external.build.clkpr=
+bosl0v5.menu.clock.16MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.16MHz_external.build.clock_speed=16000000_hz
+bosl0v5.menu.clock.16MHz_external.build.f_cpu=16000000L
+
+bosl0v5.menu.clock.20MHz_external=External 20 MHz
+bosl0v5.menu.clock.20MHz_external.upload.speed=115200
+bosl0v5.menu.clock.20MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.20MHz_external.build.clkpr=
+bosl0v5.menu.clock.20MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.20MHz_external.build.clock_speed=20000000_hz
+bosl0v5.menu.clock.20MHz_external.build.f_cpu=20000000L
+
+bosl0v5.menu.clock.18_432MHz_external=External 18.4320 MHz
+bosl0v5.menu.clock.18_432MHz_external.upload.speed=115200
+bosl0v5.menu.clock.18_432MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.18_432MHz_external.build.clkpr=
+bosl0v5.menu.clock.18_432MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.18_432MHz_external.build.clock_speed=18432000_hz
+bosl0v5.menu.clock.18_432MHz_external.build.f_cpu=18432000L
+
+bosl0v5.menu.clock.14_7456MHz_external=External 14.7456 MHz
+bosl0v5.menu.clock.14_7456MHz_external.upload.speed=115200
+bosl0v5.menu.clock.14_7456MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.14_7456MHz_external.build.clkpr=
+bosl0v5.menu.clock.14_7456MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.14_7456MHz_external.build.clock_speed=14745600_hz
+bosl0v5.menu.clock.14_7456MHz_external.build.f_cpu=14745600L
+
+bosl0v5.menu.clock.12MHz_external=External 12 MHz
+bosl0v5.menu.clock.12MHz_external.upload.speed=57600
+bosl0v5.menu.clock.12MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.12MHz_external.build.clkpr=
+bosl0v5.menu.clock.12MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.12MHz_external.build.clock_speed=12000000_hz
+bosl0v5.menu.clock.12MHz_external.build.f_cpu=12000000L
+
+bosl0v5.menu.clock.11_0592MHz_external=External 11.0592 MHz
+bosl0v5.menu.clock.11_0592MHz_external.upload.speed=115200
+bosl0v5.menu.clock.11_0592MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.11_0592MHz_external.build.clkpr=
+bosl0v5.menu.clock.11_0592MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.11_0592MHz_external.build.clock_speed=11059200_hz
+bosl0v5.menu.clock.11_0592MHz_external.build.f_cpu=11059200L
+
+bosl0v5.menu.clock.8MHz_external=External 8 MHz
+bosl0v5.menu.clock.8MHz_external.upload.speed=57600
+bosl0v5.menu.clock.8MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.8MHz_external.build.clkpr=
+bosl0v5.menu.clock.8MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.8MHz_external.build.clock_speed=8000000L_hz
+bosl0v5.menu.clock.8MHz_external.build.f_cpu=8000000L
+
+bosl0v5.menu.clock.7_3728MHz_external=External 7.3728 MHz
+bosl0v5.menu.clock.7_3728MHz_external.upload.speed=115200
+bosl0v5.menu.clock.7_3728MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.7_3728MHz_external.build.clkpr=
+bosl0v5.menu.clock.7_3728MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.7_3728MHz_external.build.clock_speed=7372800_hz
+bosl0v5.menu.clock.7_3728MHz_external.build.f_cpu=7372800L
+
+bosl0v5.menu.clock.6MHz_external=External 6 MHz
+bosl0v5.menu.clock.6MHz_external.upload.speed=57600
+bosl0v5.menu.clock.6MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.6MHz_external.build.clkpr=
+bosl0v5.menu.clock.6MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.6MHz_external.build.clock_speed=6000000_hz
+bosl0v5.menu.clock.6MHz_external.build.f_cpu=6000000L
+
+bosl0v5.menu.clock.4MHz_external=External 4 MHz
+bosl0v5.menu.clock.4MHz_external.upload.speed=9600
+bosl0v5.menu.clock.4MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.4MHz_external.build.clkpr=
+bosl0v5.menu.clock.4MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.4MHz_external.build.clock_speed=4000000_hz
+bosl0v5.menu.clock.4MHz_external.build.f_cpu=4000000L
+
+bosl0v5.menu.clock.3_6864MHz_external=External 3.6864 MHz
+bosl0v5.menu.clock.3_6864MHz_external.upload.speed=115200
+bosl0v5.menu.clock.3_6864MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.3_6864MHz_external.build.clkpr=
+bosl0v5.menu.clock.3_6864MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.3_6864MHz_external.build.clock_speed=3686400_hz
+bosl0v5.menu.clock.3_6864MHz_external.build.f_cpu=3686400L
+
+bosl0v5.menu.clock.2MHz_external=External 2 MHz
+bosl0v5.menu.clock.2MHz_external.upload.speed=9600
+bosl0v5.menu.clock.2MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.2MHz_external.build.clkpr=
+bosl0v5.menu.clock.2MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.2MHz_external.build.clock_speed=2000000_hz
+bosl0v5.menu.clock.2MHz_external.build.f_cpu=2000000L
+
+bosl0v5.menu.clock.1_8432MHz_external=External 1.8432 MHz
+bosl0v5.menu.clock.1_8432MHz_external.upload.speed=115200
+bosl0v5.menu.clock.1_8432MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.1_8432MHz_external.build.clkpr=
+bosl0v5.menu.clock.1_8432MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.1_8432MHz_external.build.clock_speed=1843200_hz
+bosl0v5.menu.clock.1_8432MHz_external.build.f_cpu=1843200L
+
+bosl0v5.menu.clock.1MHz_external=External 1 MHz
+bosl0v5.menu.clock.1MHz_external.upload.speed=9600
+bosl0v5.menu.clock.1MHz_external.bootloader.low_fuses=0xf7
+bosl0v5.menu.clock.1MHz_external.build.clkpr=
+bosl0v5.menu.clock.1MHz_external.build.oscillator=external_oscillator
+bosl0v5.menu.clock.1MHz_external.build.clock_speed=1000000_hz
+bosl0v5.menu.clock.1MHz_external.build.f_cpu=1000000L
+
+bosl0v5.menu.clock.8MHz_internal=Internal 8 MHz
+bosl0v5.menu.clock.8MHz_internal.upload.speed=38400
+bosl0v5.menu.clock.8MHz_internal.bootloader.low_fuses=0xe2
+bosl0v5.menu.clock.8MHz_internal.build.clkpr=
+bosl0v5.menu.clock.8MHz_internal.build.oscillator=internal_oscillator
+bosl0v5.menu.clock.8MHz_internal.build.clock_speed=8000000_hz
+bosl0v5.menu.clock.8MHz_internal.build.f_cpu=8000000L
+
+bosl0v5.menu.clock.4MHz_internal=Internal 4 MHz
+bosl0v5.menu.clock.4MHz_internal.upload.speed=9600
+bosl0v5.menu.clock.4MHz_internal.bootloader.low_fuses=0xe2
+bosl0v5.menu.clock.4MHz_internal.build.clkpr=-DOSC_PRESCALER=0x01
+bosl0v5.menu.clock.4MHz_internal.build.oscillator=internal_oscillator
+bosl0v5.menu.clock.4MHz_internal.build.clock_speed=8000000_hz
+bosl0v5.menu.clock.4MHz_internal.build.f_cpu=4000000L
+
+bosl0v5.menu.clock.2MHz_internal=Internal 2 MHz
+bosl0v5.menu.clock.2MHz_internal.upload.speed=9600
+bosl0v5.menu.clock.2MHz_internal.bootloader.low_fuses=0xe2
+bosl0v5.menu.clock.2MHz_internal.build.clkpr=-DOSC_PRESCALER=0x02
+bosl0v5.menu.clock.2MHz_internal.build.oscillator=internal_oscillator
+bosl0v5.menu.clock.2MHz_internal.build.clock_speed=8000000_hz
+bosl0v5.menu.clock.2MHz_internal.build.f_cpu=2000000L
+
+bosl0v5.menu.clock.1MHz_internal=Internal 1 MHz
+bosl0v5.menu.clock.1MHz_internal.upload.speed=9600
+bosl0v5.menu.clock.1MHz_internal.bootloader.low_fuses=0x62
+bosl0v5.menu.clock.1MHz_internal.build.clkpr=
+bosl0v5.menu.clock.1MHz_internal.build.oscillator=internal_oscillator
+bosl0v5.menu.clock.1MHz_internal.build.clock_speed=1000000_hz
+bosl0v5.menu.clock.1MHz_internal.build.f_cpu=1000000L
+
+##############################################################
+## BoSL Board 0.4.x w/ ATmega328P @ 3.3V, 8 MHz
+bosl0v4.name=BoSL Board 0.4.x
+bosl0v4.upload.tool=avrdude
+bosl0v4.upload.maximum_data_size=2048
+bosl0v4.bootloader.tool=avrdude
+bosl0v4.bootloader.unlock_bits=0x3f
+bosl0v4.bootloader.lock_bits=0x0f
+bosl0v4.build.core=MCUdude_corefiles
+bosl0v4.build.board=BOSL0V4_BOARD
+bosl0v4.build.bootloader_led=B5
+bosl0v4.build.extra_flags={build.clkpr}
+
+# Upload port select
+bosl0v4.menu.bootloader.uart0=Yes (UART0)
+bosl0v4.menu.bootloader.uart0.upload.maximum_size=32256
+bosl0v4.menu.bootloader.uart0.upload.protocol=arduino
+bosl0v4.menu.bootloader.uart0.upload.port=UART0
+bosl0v4.menu.bootloader.uart0.build.export_merged_output=true
+bosl0v4.menu.bootloader.uart0.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+bosl0v4.menu.bootloader.uart0.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}.hex
+
+bosl0v4.menu.bootloader.no_bootloader=No bootloader
+bosl0v4.menu.bootloader.no_bootloader.upload.maximum_size=32768
+bosl0v4.menu.bootloader.no_bootloader.build.export_merged_output=false
+bosl0v4.menu.bootloader.no_bootloader.bootloader.high_fuses=0b1101{bootloader.eesave_bit}111
+bosl0v4.menu.bootloader.no_bootloader.bootloader.file=empty/empty.hex
+
+# EEPROM
+bosl0v4.menu.eeprom.keep=EEPROM retained
+bosl0v4.menu.eeprom.keep.bootloader.eesave_bit=0
+bosl0v4.menu.eeprom.erase=EEPROM not retained
+bosl0v4.menu.eeprom.erase.bootloader.eesave_bit=1
+
+# Variants
+bosl0v4.bootloader.cksel_bits=0111
+bosl0v4.bootloader.cfd_bit=1
+bosl0v4.build.variant=standard
+bosl0v4.build.mcu=atmega328p
+
+# Brown out detection
+bosl0v4.menu.BOD.2v7=BOD 2.7V
+bosl0v4.menu.BOD.2v7.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}101
+bosl0v4.menu.BOD.4v3=BOD 4.3V
+bosl0v4.menu.BOD.4v3.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}100
+bosl0v4.menu.BOD.1v8=BOD 1.8V
+bosl0v4.menu.BOD.1v8.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}110
+bosl0v4.menu.BOD.disabled=BOD  disabled
+bosl0v4.menu.BOD.disabled.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}111
+
+
+bosl0v4.compiler.c.extra_flags=-Wextra -flto -g
+bosl0v4.compiler.c.elf.extra_flags=-w -flto -g 
+bosl0v4.compiler.cpp.extra_flags=-Wextra -flto -g
+bosl0v4.ltoarcmd=avr-gcc-ar
+
+bosl0v4.upload.speed=57600
+bosl0v4.bootloader.low_fuses=0b1111{bootloader.cksel_bits}
+bosl0v4.build.clkpr=
+bosl0v4.build.clock_speed={build.f_cpu}
+bosl0v4.build.f_cpu=8000000L
+
+
+##############################################################
+
+## microBoSL w/ ATmega328P @ 3.3V, 8 MHz
+microbosl.name=microBoSL
+microbosl.upload.tool=avrdude
+microbosl.upload.maximum_data_size=2048
+microbosl.bootloader.tool=avrdude
+microbosl.bootloader.unlock_bits=0x3f
+microbosl.bootloader.lock_bits=0x0f
+microbosl.build.core=MCUdude_corefiles
+microbosl.build.board=MICRO_BOSL
+microbosl.build.bootloader_led=B5
+microbosl.build.extra_flags={build.clkpr}
+
+# Upload port select
+microbosl.menu.bootloader.uart0=Yes (UART0)
+microbosl.menu.bootloader.uart0.upload.maximum_size=32256
+microbosl.menu.bootloader.uart0.upload.protocol=arduino
+microbosl.menu.bootloader.uart0.upload.port=UART0
+microbosl.menu.bootloader.uart0.build.export_merged_output=true
+microbosl.menu.bootloader.uart0.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+microbosl.menu.bootloader.uart0.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}.hex
+
+microbosl.menu.bootloader.no_bootloader=No bootloader
+microbosl.menu.bootloader.no_bootloader.upload.maximum_size=32768
+microbosl.menu.bootloader.no_bootloader.build.export_merged_output=false
+microbosl.menu.bootloader.no_bootloader.bootloader.high_fuses=0b1101{bootloader.eesave_bit}111
+microbosl.menu.bootloader.no_bootloader.bootloader.file=empty/empty.hex
+
+# EEPROM
+microbosl.menu.eeprom.keep=EEPROM retained
+microbosl.menu.eeprom.keep.bootloader.eesave_bit=0
+microbosl.menu.eeprom.erase=EEPROM not retained
+microbosl.menu.eeprom.erase.bootloader.eesave_bit=1
+
+# Variants
+microbosl.bootloader.cksel_bits=0111
+microbosl.bootloader.cfd_bit=1
+microbosl.build.variant=standard
+microbosl.build.mcu=atmega328p
+
+# Brown out detection
+microbosl.menu.BOD.2v7=BOD 2.7V
+microbosl.menu.BOD.2v7.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}101
+microbosl.menu.BOD.4v3=BOD 4.3V
+microbosl.menu.BOD.4v3.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}100
+microbosl.menu.BOD.1v8=BOD 1.8V
+microbosl.menu.BOD.1v8.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}110
+microbosl.menu.BOD.disabled=BOD  disabled
+microbosl.menu.BOD.disabled.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}111
+
+
+microbosl.compiler.c.extra_flags=-Wextra -flto -g
+microbosl.compiler.c.elf.extra_flags=-w -flto -g 
+microbosl.compiler.cpp.extra_flags=-Wextra -flto -g
+microbosl.ltoarcmd=avr-gcc-ar
+
+microbosl.upload.speed=57600
+microbosl.bootloader.low_fuses=0b1111{bootloader.cksel_bits}
+microbosl.build.clkpr=
+microbosl.build.clock_speed={build.f_cpu}
+microbosl.build.f_cpu=8000000L
+
+##############################################################
+
+## ATmega328PB (3.3V, 8 MHz) 
+328PB.name=ATmega328PB (3.3V, 8 MHz) 
+328PB.upload.tool=avrdude
+328PB.upload.maximum_data_size=2048
+328PB.bootloader.tool=avrdude
+328PB.bootloader.unlock_bits=0x3f
+328PB.bootloader.lock_bits=0x0f
+328PB.build.core=MCUdude_corefiles
+328PB.build.board=AVR_ATmega328
+328PB.build.bootloader_led=B5
+328PB.build.extra_flags={build.clkpr}
+
+# Upload port select
+328PB.menu.bootloader.uart0=Yes (UART0)
+328PB.menu.bootloader.uart0.upload.maximum_size=32256
+328PB.menu.bootloader.uart0.upload.protocol=arduino
+328PB.menu.bootloader.uart0.upload.port=UART0
+328PB.menu.bootloader.uart0.build.export_merged_output=true
+328PB.menu.bootloader.uart0.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+328PB.menu.bootloader.uart0.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}.hex
+
+328PB.menu.bootloader.uart1=Yes (UART1)
+328PB.menu.bootloader.uart1.upload.maximum_size=32256
+328PB.menu.bootloader.uart1.upload.protocol=arduino
+328PB.menu.bootloader.uart1.upload.port=UART1
+328PB.menu.bootloader.uart1.build.export_merged_output=true
+328PB.menu.bootloader.uart1.bootloader.high_fuses=0b1101{bootloader.eesave_bit}110
+328PB.menu.bootloader.uart1.bootloader.file=optiboot_flash/bootloaders/{build.mcu}/{build.clock_speed}/optiboot_flash_{build.mcu}_{upload.port}_{upload.speed}_{build.clock_speed}_{build.bootloader_led}.hex
+
+328PB.menu.bootloader.no_bootloader=No bootloader
+328PB.menu.bootloader.no_bootloader.upload.maximum_size=32768
+328PB.menu.bootloader.no_bootloader.build.export_merged_output=false
+328PB.menu.bootloader.no_bootloader.bootloader.high_fuses=0b1101{bootloader.eesave_bit}111
+328PB.menu.bootloader.no_bootloader.bootloader.file=empty/empty.hex
+
+# EEPROM
+328PB.menu.eeprom.keep=EEPROM retained
+328PB.menu.eeprom.keep.bootloader.eesave_bit=0
+328PB.menu.eeprom.erase=EEPROM not retained
+328PB.menu.eeprom.erase.bootloader.eesave_bit=1
+
+# Variants
+328PB.bootloader.cksel_bits=1111
+328PB.bootloader.cfd_bit=0
+328PB.build.variant=pb-variant
+328PB.build.mcu=atmega328pb
+
+# Brown out detection
+328PB.menu.BOD.2v7=BOD 2.7V
+328PB.menu.BOD.2v7.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}101
+328PB.menu.BOD.4v3=BOD 4.3V
+328PB.menu.BOD.4v3.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}100
+328PB.menu.BOD.1v8=BOD 1.8V
+328PB.menu.BOD.1v8.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}110
+328PB.menu.BOD.disabled=BOD  disabled
+328PB.menu.BOD.disabled.bootloader.extended_fuses=0b1111{bootloader.cfd_bit}111
+
+#Serial buffer
+328PB.menu.serial0buf.disabled=Default
+328PB.menu.serial0buf.disabled.compilerSB0.c.extra_flags=
+328PB.menu.serial0buf.disabled.compilerSB0.cpp.extra_flags=
+
+328PB.menu.serial0buf.sb6464=64/64
+328PB.menu.serial0buf.sb6464.compilerSB0.c.extra_flags=-DSERIAL_RX_BUFFER_SIZE=64 -DSERIAL_TX_BUFFER_SIZE=64
+328PB.menu.serial0buf.sb6464.compilerSB0.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=64 -DSERIAL_TX_BUFFER_SIZE=64
+
+328PB.menu.serial0buf.sb3232=32/32
+328PB.menu.serial0buf.sb3232.compilerSB0.c.extra_flags=-DSERIAL_RX_BUFFER_SIZE=32 -DSERIAL_TX_BUFFER_SIZE=32
+328PB.menu.serial0buf.sb3232.compilerSB0.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=32 -DSERIAL_TX_BUFFER_SIZE=32
+
+328PB.menu.serial0buf.sb1616=16/16
+328PB.menu.serial0buf.sb1616.compilerSB0.c.extra_flags=-DSERIAL_RX_BUFFER_SIZE=16 -DSERIAL_TX_BUFFER_SIZE=16
+328PB.menu.serial0buf.sb1616.compilerSB0.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=16 -DSERIAL_TX_BUFFER_SIZE=16
+
+#Serial1 buffer
+#328PB.menu.serial1buf.disabled=Default
+#328PB.menu.serial1buf.disabled.compilerSB1.c.extra_flags=
+#328PB.menu.serial1buf.disabled.compilerSB1.cpp.extra_flags=
+
+#328PB.menu.serial1buf.sb6416=64/16
+#328PB.menu.serial1buf.sb6416.compilerSB1.c.extra_flags=-DSERIAL_RX_BUFFER_SIZE=64 -DSERIAL_TX_BUFFER_SIZE=16
+#328PB.menu.serial1buf.sb6416.compilerSB1.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=64 -DSERIAL_TX_BUFFER_SIZE=16
+
+#328PB.menu.serial1buf.sb3216=32/16
+#328PB.menu.serial1buf.sb3216.compilerSB1.c.extra_flags=-DSERIAL_RX_BUFFER_SIZE=32 -DSERIAL_TX_BUFFER_SIZE=16
+#328PB.menu.serial1buf.sb3216.compilerSB1.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=32 -DSERIAL_TX_BUFFER_SIZE=16
+
+#328PB.menu.serial1buf.sb1616=16/16
+#328PB.menu.serial1buf.sb1616.compilerSB1.c.extra_flags=-DSERIAL_RX_BUFFER_SIZE=16 -DSERIAL_TX_BUFFER_SIZE=16
+#328PB.menu.serial1buf.sb1616.compilerSB1.cpp.extra_flags=-DSERIAL_RX_BUFFER_SIZE=16 -DSERIAL_TX_BUFFER_SIZE=16
+
+#I2C buffer
+328PB.menu.twibuf.disabled=Default
+328PB.menu.twibuf.disabled.compilerTWI.c.extra_flags=
+328PB.menu.twibuf.disabled.compilerTWI.cpp.extra_flags=
+
+328PB.menu.twibuf.twb3232=32/32
+328PB.menu.twibuf.twb3232.compilerTWI.c.extra_flags=-DTWI_BUFFER_SIZE=32 
+328PB.menu.twibuf.twb3232.compilerTWI.cpp.extra_flags=-DTWI_BUFFER_SIZE=32 
+
+328PB.menu.twibuf.twb1616=16/16
+328PB.menu.twibuf.twb1616.compilerTWI.c.extra_flags=-DTWI_BUFFER_SIZE=16 
+328PB.menu.twibuf.twb1616.compilerTWI.cpp.extra_flags=-DTWI_BUFFER_SIZE=16
+
+328PB.menu.twibuf.twb88=8/8
+328PB.menu.twibuf.twb88.compilerTWI.c.extra_flags=-DTWI_BUFFER_SIZE=8 
+328PB.menu.twibuf.twb88.compilerTWI.cpp.extra_flags=-DTWI_BUFFER_SIZE=8 
+
+#LTO
+328PB.compiler.c.extra_flags=-Wextra -flto -g {compilerSB0.c.extra_flags} {compilerTWI.c.extra_flags}
+328PB.compiler.c.elf.extra_flags=-w -flto -g 
+328PB.compiler.cpp.extra_flags=-Wextra -flto -g {compilerSB0.cpp.extra_flags} {compilerTWI.cpp.extra_flags}
+328PB.ltoarcmd=avr-gcc-ar
+
+# Clock frequencies
+328PB.upload.speed=57600
+328PB.bootloader.low_fuses=0b1111{bootloader.cksel_bits}
+328PB.build.clkpr=
+328PB.build.clock_speed={build.f_cpu}
+328PB.build.f_cpu=8000000L

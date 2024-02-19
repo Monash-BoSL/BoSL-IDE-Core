@@ -1,0 +1,6 @@
+[submodule "BoSLBoards-1.2.0/MiniCore"]
+	path = BoSLBoards-1.2.0/MiniCore
+	url = https://github.com/Monash-BoSL/MiniCore.git
+[submodule "BoSLBoards-1.2.0/MegaCore"]
+	path = BoSLBoards-1.2.0/MegaCore
+	url = https://github.com/Monash-BoSL/MegaCore.git
