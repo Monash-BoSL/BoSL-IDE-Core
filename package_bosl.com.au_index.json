@@ -538,8 +538,8 @@
           "category": "Contributed",
           "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSLBoards_AVR_A-1.2.0.zip",
           "archiveFileName": "BoSLBoards_AVR_A-1.2.0.zip",
-          "checksum": "SHA-256:2f987eeb3f4c4560ccb9a0fc4c1fcfad90bcdb27266a09ad242b81e0acc4ccce",
-          "size": "2765389",
+          "checksum": "SHA-256:882c8a4a58b23c04152b20819987caf6e19263a0128b57f9fc2050c63db5b0d2",
+          "size": "2784905",
           "boards": [
             {"name": "BoSL Board 0.4.x"},
             {"name": "microBoSL" },
@@ -566,8 +566,8 @@
           "category": "Contributed",
           "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSLBoards_AVR_B-1.2.0.zip",
           "archiveFileName": "BoSLBoards_AVR_B-1.2.0.zip",
-          "checksum": "SHA-256:ddb00b83a9d4ed329f4af0a4542d3d6579fb419f633b8d6f87bb0a409c1a8c6a",
-          "size": "7189741",
+          "checksum": "SHA-256:41dd959488f6efe8638f37bb72ad75b4ad8bbb49326b225e086b6a43ecc1f27c",
+          "size": "7258965",
           "boards": [
             {"name": "BoSL Board 0.5.x"}
           ],
