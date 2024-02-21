@@ -1,6 +1,6 @@
 ,
         {
-          "name": "BoSL Boards (A)",
+          "name": "BoSL Boards AVR A",
           "architecture": "avr",
           "version": "%(version)%",
           "category": "Contributed",
@@ -9,7 +9,7 @@
           "checksum": "SHA-256:%(sha256)%",
           "size": "%(size)%",
           "boards": [
-            {"name": "BoSL Board"},
+            {"name": "BoSL Board 0.4.x"},
             {"name": "microBoSL" },
             {"name": "ATmega328PB" }
           ],
