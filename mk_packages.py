@@ -53,16 +53,18 @@ package_type = PackageType[package_type_str]
 folder_path = nples[package_type]["name"]+nples[package_type]["path"]
 platform_name = nples[package_type]["name"]
 
+platform_txt = "./tmp/"+nples[package_type]["name"]+"/platform.txt"
+
 #Copy and update platform.txt
 shutil.rmtree("./tmp/", ignore_errors=True)
-shutil.copytree(folder_path, "./tmp/", )
+shutil.copytree(folder_path, "./tmp/"+nples[package_type]["name"], )
 
 #Update platform.txt
-with open("./tmp/platform.txt", 'r') as f:
+with open(platform_txt, 'r') as f:
     lines = f.readlines()
 
 version_updated = False
-with open("./tmp/platform.txt", 'w') as f:
+with open(platform_txt, 'w') as f:
     for line in lines:
         newline = line.replace("version=0.0.0", f"version={version_number}")
         if(newline != line):
