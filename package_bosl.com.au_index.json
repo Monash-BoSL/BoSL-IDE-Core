@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "BoSL Boards",
+      "name": "BoSL Boards AVR [obsolete]",
       "maintainer": "BoSL: Water Monitoring & Control",
       "websiteURL": "http://www.bosl.com.au/wiki/",
       "email": "stephen.catsamas@monash.edu",
@@ -10,7 +10,7 @@
       },
       "platforms": [
         {
-          "name": "BoSL Boards",
+          "name": "BoSL Boards AVR [obsolete]",
           "architecture": "avr",
           "version": "1.0.0",
           "category": "Contributed",
@@ -25,7 +25,7 @@
           "toolsDependencies": []
         },
         {
-          "name": "BoSL Boards",
+          "name": "BoSL Boards AVR [obsolete]",
           "architecture": "avr",
           "version": "1.1.0",
           "category": "Contributed",
@@ -41,7 +41,7 @@
           "toolsDependencies": []
         },
         {
-          "name": "BoSL Boards",
+          "name": "BoSL Boards AVR [obsolete]",
           "architecture": "avr",
           "version": "1.1.1",
           "category": "Contributed",
@@ -55,7 +55,19 @@
             {"name": "ATmega328PB" }
           ],
           "toolsDependencies": []
-        },
+        }
+      ],
+      "tools": []
+    },
+    {
+      "name": "BoSL SAMD Boards",
+      "maintainer": "BoSL: Water Monitoring & Control",
+      "websiteURL": "http://www.bosl.com.au/wiki/",
+      "email": "stephen.catsamas@monash.edu",
+      "help": {
+        "online": "http://www.bosl.com.au/wiki/"
+      },
+      "platforms": [
         {
           "name": "BoSL SAMD Boards",
           "architecture": "samd",
@@ -98,7 +110,7 @@
           ]
         },
         {
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.1",
           "category": "Contributed",
@@ -139,7 +151,7 @@
           ]
         },
         {
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.2",
           "category": "Contributed",
@@ -180,7 +192,7 @@
           ]
         },
         {
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.3",
           "category": "Contributed",
@@ -221,7 +233,7 @@
           ]
         },
         {
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.4",
           "category": "Contributed",
@@ -262,7 +274,7 @@
           ]
         },
 		{
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.5",
           "category": "Contributed",
@@ -303,7 +315,7 @@
           ]
         },
 		{
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.6",
           "category": "Contributed",
@@ -344,7 +356,7 @@
           ]
         },
 		{
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.7",
           "category": "Contributed",
@@ -385,7 +397,7 @@
           ]
         },
 		{
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.8",
           "category": "Contributed",
@@ -426,7 +438,7 @@
           ]
         },
 		{
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.0.9",
           "category": "Contributed",
@@ -467,7 +479,7 @@
           ]
         },
 		{
-          "name": "BoSL SAMD Boards",
+          "name": "BoSL Boards SAMD",
           "architecture": "samd",
           "version": "1.1.0",
           "category": "Contributed",
@@ -506,9 +518,21 @@
               "version": "1.2.0"
             }
           ]
-        },
+        }
+      ],
+      "tools": []
+    },
+    {
+      "name": "BoSL Boards AVR A",
+      "maintainer": "BoSL: Water Monitoring & Control",
+      "websiteURL": "http://www.bosl.com.au/wiki/",
+      "email": "stephen.catsamas@monash.edu",
+      "help": {
+        "online": "http://www.bosl.com.au/wiki/"
+      },
+      "platforms": [
         {
-          "name": "BoSL Boards (A)",
+          "name": "BoSL Boards AVR A",
           "architecture": "avr",
           "version": "1.2.0",
           "category": "Contributed",
@@ -522,9 +546,21 @@
             {"name": "ATmega328PB" }
           ],
           "toolsDependencies": []
-        },
+        }
+      ],
+      "tools": []
+    },
+    {
+      "name": "BoSL Boards AVR B",
+      "maintainer": "BoSL: Water Monitoring & Control",
+      "websiteURL": "http://www.bosl.com.au/wiki/",
+      "email": "stephen.catsamas@monash.edu",
+      "help": {
+        "online": "http://www.bosl.com.au/wiki/"
+      },
+      "platforms": [
         {
-          "name": "BoSL Boards (B)",
+          "name": "BoSL Boards AVR B",
           "architecture": "avr",
           "version": "1.2.0",
           "category": "Contributed",
