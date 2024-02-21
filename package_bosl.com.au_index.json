@@ -529,7 +529,7 @@
           "version": "1.2.0",
           "category": "Contributed",
           "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSL_Boards_AVR_B-1.2.0.zip",
-          "archiveFileName": "BoSL_Boards_AVR_A-1.2.0.zip",
+          "archiveFileName": "BoSL_Boards_AVR_B-1.2.0.zip",
           "checksum": "SHA-256:ddb00b83a9d4ed329f4af0a4542d3d6579fb419f633b8d6f87bb0a409c1a8c6a",
           "size": "7189741",
           "boards": [
