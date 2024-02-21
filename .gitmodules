@@ -1,0 +1,6 @@
+[submodule "BoSLBoards-1.2.0/MiniCore"]
+	path = BoSLBoards_AVR_A
+	url = https://github.com/Monash-BoSL/MiniCore.git
+[submodule "BoSLBoards-1.2.0/MegaCore"]
+	path = BoSLBoards_AVR_B
+	url = https://github.com/Monash-BoSL/MegaCore.git
