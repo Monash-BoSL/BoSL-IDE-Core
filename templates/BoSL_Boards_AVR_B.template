@@ -4,8 +4,8 @@
           "architecture": "avr",
           "version": "%(version)%",
           "category": "Contributed",
-          "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSL_Boards_AVR_B-%(version)%.zip",
-          "archiveFileName": "BoSL_Boards_AVR_B-%(version)%.zip",
+          "url": "https://monash-bosl.github.io/BoSL-IDE-Core/releases/BoSLBoards_AVR_B-%(version)%.zip",
+          "archiveFileName": "BoSLBoards_AVR_B-%(version)%.zip",
           "checksum": "SHA-256:%(sha256)%",
           "size": "%(size)%",
           "boards": [
