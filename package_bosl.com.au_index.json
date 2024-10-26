@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "BoSL Boards AVR [obsolete]",
+      "name": "bosl-avr",
       "maintainer": "BoSL: Water Monitoring & Control",
       "websiteURL": "http://www.bosl.com.au/wiki/",
       "email": "stephen.catsamas@monash.edu",
@@ -60,7 +60,7 @@
       "tools": []
     },
     {
-      "name": "BoSL SAMD Boards",
+      "name": "bosl-samd",
       "maintainer": "BoSL: Water Monitoring & Control",
       "websiteURL": "http://www.bosl.com.au/wiki/",
       "email": "stephen.catsamas@monash.edu",
@@ -523,7 +523,7 @@
       "tools": []
     },
     {
-      "name": "BoSL Boards AVR A",
+      "name": "bosl-avr-a",
       "maintainer": "BoSL: Water Monitoring & Control",
       "websiteURL": "http://www.bosl.com.au/wiki/",
       "email": "stephen.catsamas@monash.edu",
@@ -568,7 +568,7 @@
                   "version": "7.3.0-atmel3.6.1-arduino7"
                 },
                 {
-                  "packager": "BoSL Boards AVR A",
+                  "packager": "bosl-avr-a",
                   "name": "avrdude",
                   "version": "7.2-arduino.1"
                 },
@@ -632,7 +632,7 @@
         ]
     },
     {
-      "name": "BoSL Boards AVR B",
+      "name": "bosl-avr-b",
       "maintainer": "BoSL: Water Monitoring & Control",
       "websiteURL": "http://www.bosl.com.au/wiki/",
       "email": "stephen.catsamas@monash.edu",
@@ -673,7 +673,7 @@
                   "version": "7.3.0-atmel3.6.1-arduino7"
                 },
                 {
-                  "packager": "BoSL Boards AVR A",
+                  "packager": "bosl-avr-a",
                   "name": "avrdude",
                   "version": "7.2-arduino.1"
                 },
@@ -703,7 +703,7 @@
                   "version": "7.3.0-atmel3.6.1-arduino7"
                 },
                 {
-                  "packager": "BoSL Boards AVR A",
+                  "packager": "bosl-avr-a",
                   "name": "avrdude",
                   "version": "7.2-arduino.1"
                 },
